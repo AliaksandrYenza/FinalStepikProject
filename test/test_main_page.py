@@ -7,7 +7,8 @@ def test_guest_can_go_to_login_page(browser):
     link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-shellcoders-handbook_209/?promo=midsummer"
     page = MainPage(browser, link)
     page.open()
-    login_page = page.go_to_login_page() #1
+    page.go_to_login_page() #1
+    login_page = LoginPage(browser, browser.current_url)
     login_page.should_be_link_login() #1
 
 
