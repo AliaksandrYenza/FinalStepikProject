@@ -8,6 +8,7 @@ class BasePage():
         self.browser = browser
         self.url = url
         self.browser.implicitly_wait(timeout)
+        self.cur_url = browser.current_url
 
 
     def open(self):
