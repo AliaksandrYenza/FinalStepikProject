@@ -1,5 +1,6 @@
 import pytest
 
+from test.page.locators import BasketLocators
 from test.page.product_page import ProductPage
 
 #
@@ -13,11 +14,21 @@ links = ["http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?pr
 
 @pytest.mark.parametrize('link', links)
 def test_guest_can_add_product_to_basket(browser, link):
-
     page = ProductPage(browser, link)
     page.open()
     page.add_to_basket()
     page.solve_quiz_and_get_code()
     page.should_be_product_page()
+
+
+def test_user_can_add_product_to_basket
+
+def test_guest_can_add_product_to_basket
+
+def test_guest_cant_see_product_in_basket_opened_from_product_page
+
+def test_guest_can_go_to_login_page_from_product_page
+
+
 
 
